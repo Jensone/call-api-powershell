@@ -20,7 +20,7 @@ Variables :
 - populationPays  = string
 - devisePays  = string
 
-
+```
 DEBUT
     Inviter l'utilisateur à saisir les initiales d'un pays
     Affecter le contenu dans la variable `initialesPays`
@@ -35,3 +35,4 @@ DEBUT
         On insère les données dans le fichier
     Afficher un message de fin
 FIN
+```
