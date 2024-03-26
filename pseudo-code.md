@@ -18,7 +18,8 @@ Variables :
 - nomPays  = string
 - capitalPays  = string
 - populationPays  = string
-- devisePays  = string
+- continent  = string
+- contenuHtml = string
 
 ```
 DEBUT
@@ -28,11 +29,10 @@ DEBUT
         `endpointApi`/`initialesPays`
     Lancer l'appel à l'API Restcountries
     Récupérer la réponse de l'appel API dans un variable `response`
-    Convertir le contenu depuis le Json
     Affecter les valeurs à la liste des variable pour l'affichage
     Créer le document HTML
         "fiche-`initialesPays`.html"
-        On insère les données dans le fichier
+        On insère le contenu avec les données dans le fichier
     Afficher un message de fin
 FIN
 ```

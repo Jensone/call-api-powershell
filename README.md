@@ -9,7 +9,7 @@ Créer un programme en PowerShell qui permet de récupérer les informations sui
 -   Nom du pays
 -   Capitale
 -   Population
--   Devise
+-   Continent
 
 Ces informations devront être insérée dans un fichier .html qui contiendra le code HTML suivant :
 
@@ -28,7 +28,7 @@ Ces informations devront être insérée dans un fichier .html qui contiendra le
             <li>Nom: $nomPays</li>
             <li>Capitale: $capitalPays</li>
             <li>Population: $populationPays</li>
-            <li>Devise: $devisePays</li>
+            <li>Continent: $continent</li>
         </ul>
     </body>
 </html>
