@@ -19,7 +19,7 @@ Veuillez suivre les instructions pour obtenir les informations sur un pays.
 
 Comment ça marche ?
 1. Saisissez les initiales du pays que vous souhaitez rechercher.
-    Les initiales du pays doivent être composées de 2 ou 3 caractères.
+    Les initiales du pays doivent être composées de 2 caractères.
     ** Exemple : France -> FR, Allemagne -> DE, Suisse -> CH **
 2. L'application va rechercher les informations sur le pays que vous avez demandé.
 3. Les informations sur le pays seront enregistrées dans un fichier HTML.
@@ -36,7 +36,7 @@ while ($true) {
     if ($initialesPays.Length -eq 2) {
         break
     }
-    Write-Host "Les initiales du pays doivent être composées de 2 ou 3 caractères"
+    Write-Host "Les initiales du pays doivent être composées de 2 caractères"
 }
 
 # ----------------- Récupération des informations sur le pays -----------------
@@ -46,7 +46,7 @@ if (-not (Test-Connection -ComputerName "restcountries.com" -Quiet)) {
 }
 
 Write-Host "Recherche des informations sur le pays en cours..."
-sleep(3) # Simule un délai de 3 secondes
+sleep(2) # Simule un délai de 2 secondes
 
 $endpointApi = "https://restcountries.com/v3.1/alpha/$initialesPays"
 $response = Invoke-RestMethod $endpointApi -Method Get
@@ -107,7 +107,8 @@ $sortieFichier = Join-Path $sortieRepertoire -ChildPath $nomFichier
 $contenuHtml | Out-File -Path $sortieFichier -encoding  UTF8
 
 Write-Host "Les informations sur le pays que vous avez demandé ont été ajoutées dans le fichier $sortieFichier"
-}
+
+} # Fin de la fonction
 
 # ----------------- Lancement du programme -----------------
 lauchApp
