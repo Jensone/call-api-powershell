@@ -40,7 +40,7 @@ $contenuHtml = @"
 </html>
 "@
 
-$sortieRepertoire = "$env:HOME/powershell" # Chemin pour Mac & Linux
+$sortieRepertoire = "$env:HOME/powershell/fiches" # Chemin pour Mac & Linux
 # $sortieRepertoie = "C:\users\powershell" # Chemin pour Windows
 $nomFichier = "fiche-$initialesPays.html"
 $sortieFichier = Join-Path $sortieRepertoire -ChildPath $nomFichier
@@ -48,4 +48,4 @@ $sortieFichier = Join-Path $sortieRepertoire -ChildPath $nomFichier
 $contenuHtml | Out-File -Path $sortieFichier -encoding  UTF8
 
 # Afficher un message de fin
-Write-Host "Les informations sur le pays que vous avez demandé ont été ajoutées dans le fichier $nomFichier"
+Write-Host "Les informations sur le pays que vous avez demandé ont été ajoutées dans le fichier $sortieFichier"
